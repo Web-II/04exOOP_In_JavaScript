@@ -62,7 +62,7 @@ We bouwen het spel stap per stap op, volg de opgave...
     - <code>#score</code>: de totale score van de reeds gespeelde beurten, voorzie een getter
     - <code>#dobbelstenen</code>: een array van dobbelstenen, voorzie een getter
     - <code>speel</code>: methode waarbij de <code>#aantalDobbelstenen</code> dobbelstenen worden gerold en de score wordt verhoogd volgens de domeinregels
-      <br></br>
+    - <code>constructor</code>: na constructie van een Speler werd zijn naam coorect ingesteld via de parameter, staat zijn score op 0, en bevat #dobbelstenen 5 (i.e. #aantalDobbelstenen) nieuwe Dobbelstenen <br></br>
 
 7.  Pas de functie toHtml aan zodat deze nu een speler object kan weergeven: <code>toHtml(speler)</code>.
 
@@ -72,7 +72,7 @@ We bouwen het spel stap per stap op, volg de opgave...
 
 8.  Pas de <code>init</code> functie aan.
 
-    - maak een nieuwe Speler aan.
+    - maak een nieuwe Speler aan en roep de methode `toHtml(speler)` aan
     - event handling: zorg dat wanneer er geklikt wordt op de knop “Rol dobbelstenen”, de dobbelstenen van de speler effectief gerold worden, en de methode toHtml aangeroepen wordt.
       <br></br>
 
@@ -81,7 +81,7 @@ We bouwen het spel stap per stap op, volg de opgave...
 
 10. Declareer een klasse **<code>Spel</code>** met volgende properties:
 
-    - <code>#spelers</code>: een array van spelers; de spelers worden via de constructor aangeleverd
+    - <code>#spelers</code>: een array van Speler-objecten; de namen van de spelers worden via de `constructor` aangeleverd
     - <code>#spelerAanZet</code>: initieel de eerste speler uit de lijst van spelers; voorzie een getter
     - <code>aantalSpelers</code>: een getter die de lengte van de spelers-array retourneert
     - <code>heeftWinaar</code>: een getter die true retourneert indien 1 van de spelers een score heeft >= 10000 (tip: tijdens het testen van je spel wil je deze waarde waarschijnlijk iets lager zetten)
