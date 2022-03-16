@@ -62,7 +62,7 @@ We bouwen het spel stap per stap op, volg de opgave...
     - <code>#score</code>: de totale score van de reeds gespeelde beurten, voorzie een getter
     - <code>#dobbelstenen</code>: een array van dobbelstenen, voorzie een getter
     - <code>speel</code>: methode waarbij de <code>#aantalDobbelstenen</code> dobbelstenen worden gerold en de score wordt verhoogd volgens de domeinregels
-    - <code>constructor</code>: na constructie van een Speler werd zijn naam coorect ingesteld via de parameter, staat zijn score op 0, en bevat #dobbelstenen 5 (i.e. #aantalDobbelstenen) nieuwe Dobbelstenen <br></br>
+    - <code>constructor</code>: na constructie van een Speler werd zijn naam correct ingesteld via de parameter, staat zijn score op 0, en bevat #dobbelstenen 5 (i.e. #aantalDobbelstenen) nieuwe Dobbelstenen <br></br>
 
 7.  Pas de functie toHtml aan zodat deze nu een speler object kan weergeven: <code>toHtml(speler)</code>.
 
