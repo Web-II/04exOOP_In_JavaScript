@@ -61,7 +61,7 @@ We bouwen het spel stap per stap op, volg de opgave...
     - <code>#naam</code>: de naam van de speler, wordt ingesteld via een parameter van de constructor; voorzie een getter
     - <code>#score</code>: de totale score van de reeds gespeelde beurten, voorzie een getter
     - <code>#dobbelstenen</code>: een array van dobbelstenen, voorzie een getter
-    - <code>constructor</code>: na constructie van een Speler werd zijn naam coorect ingesteld via de parameter, staat zijn score op 0, en bevat #dobbelstenen 5 (i.e. #aantalDobbelstenen) nieuwe Dobbelstenen
+    - <code>constructor</code>: na constructie van een Speler werd zijn naam correct ingesteld via de parameter, staat zijn score op 0, en bevat #dobbelstenen 5 (i.e. #aantalDobbelstenen) nieuwe Dobbelstenen
     - <code>speel</code>: methode waarbij alle dobbelstenen uit `#dobbelstenen` worden gerold en de score wordt verhoogd volgens de domeinregels
       <br></br>
 
