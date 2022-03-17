@@ -1,4 +1,4 @@
-# Oefeningen Hoofdstuk 03 - OOP in JavaScript
+# Oefeningen Hoofdstuk 04 - OOP in JavaScript
 
 ## Oefening 1: Afrikaans dobbelen
 
@@ -61,8 +61,9 @@ We bouwen het spel stap per stap op, volg de opgave...
     - <code>#naam</code>: de naam van de speler, wordt ingesteld via een parameter van de constructor; voorzie een getter
     - <code>#score</code>: de totale score van de reeds gespeelde beurten, voorzie een getter
     - <code>#dobbelstenen</code>: een array van dobbelstenen, voorzie een getter
-    - <code>speel</code>: methode waarbij de <code>#aantalDobbelstenen</code> dobbelstenen worden gerold en de score wordt verhoogd volgens de domeinregels
-    - <code>constructor</code>: na constructie van een Speler werd zijn naam coorect ingesteld via de parameter, staat zijn score op 0, en bevat #dobbelstenen 5 (i.e. #aantalDobbelstenen) nieuwe Dobbelstenen <br></br>
+    - <code>constructor</code>: na constructie van een Speler werd zijn naam coorect ingesteld via de parameter, staat zijn score op 0, en bevat #dobbelstenen 5 (i.e. #aantalDobbelstenen) nieuwe Dobbelstenen
+    - <code>speel</code>: methode waarbij alle dobbelstenen uit `#dobbelstenen` worden gerold en de score wordt verhoogd volgens de domeinregels
+      <br></br>
 
 7.  Pas de functie toHtml aan zodat deze nu een speler object kan weergeven: <code>toHtml(speler)</code>.
 
@@ -83,6 +84,7 @@ We bouwen het spel stap per stap op, volg de opgave...
 
     - <code>#spelers</code>: een array van Speler-objecten; de namen van de spelers worden via de `constructor` aangeleverd
     - <code>#spelerAanZet</code>: initieel de eerste speler uit de lijst van spelers; voorzie een getter
+    - `constructor`: maak voor elke gegeven spelersnaam (parameter) een Speler-objectje en stop deze in de array `#spelers`
     - <code>aantalSpelers</code>: een getter die de lengte van de spelers-array retourneert
     - <code>heeftWinaar</code>: een getter die true retourneert indien 1 van de spelers een score heeft >= 10000 (tip: tijdens het testen van je spel wil je deze waarde waarschijnlijk iets lager zetten)
     - <code>scoreOverzicht</code>: een getter die een string retourneert met het overzicht van de spelers en hun score (zie afbeelding scorebord in de inleiding van de oefening)
@@ -101,13 +103,12 @@ We bouwen het spel stap per stap op, volg de opgave...
 12. Pas de <code>init</code> functie aan.
 
     - vraag via een <code>prompt</code> naar het aantal spelers
-    - prompt naar de naam van elke speler en maak een array van Speler-objecten aan
-    - maak een nieuw Spel-object aan, geef de net gemaakte spelers-array door
+    - prompt naar de naam van elke speler en maak een array met alle spelersnamen aan
+    - maak een nieuw Spel-object aan, geef de net gemaakte array door
     - event-handling
       - wanneer op de “Rol dobbelstenen” knop wordt geklikt roep je de speel methode van spel aan en roep je nadien toHtml aan
       - wanneer op de knop “Scoreboard” wordt geklikt dan wordt in een alert het scoreOverzicht van spel getoond
-
-    <br></br>
+        <br></br>
 
 13. Je kan nu het spel spelen maar enkel de eerste speler van alle opgegeven spelers doet mee...
     <br></br>
