@@ -151,8 +151,22 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
      <br></br>
 
 4. Maak in de submap js een bestand <code>OxoComponent.js</code> aan.
-   Declareer in OxoComponent.js een klasse <code>OxoComponent</code> met volgende members - <code>#bord</code>: instantie van Spelbord, aan te maken in de constructor - maak een methode <code>#toHtml</code> aan. We voorzien de code later. - in de constructor - maak een instantie aan van het Spelbord en ken dit toe aan #bord - haal alle img- elementen op en stop deze in een array, dit kan je als volgt doen
-   <pre>const imgElementen = document.getElementsByTagName('img');</pre> - overloop deze array <code>imgElementenen</code> en definieer de onclick event handler voor elk element (gebruik de arrow functions): - roep de methode plaatsSymbool aan van spelbord; als argument voor de parameter symbool geef je ‘O’ door, de argumenten voor de rij en kol parameters zal je uit het id van het <code>img-element</code> moeten halen. - denk eraan dat arrays in JavaScript 0-based zijn en dat de id’s van de <code>img-elementen</code> 1-based zijn. - stel het src-attribuut het <code>img-element</code> in op ‘images/O. - roep de methode <code>#toHtml</code> aan - roep de <code>#toHtml</code> methode aan - de methode <code>#toHtml</code>: - overloop alle rijen en kolommen van het bord. Voor elke cel (combinatie rij/kolom) haal je de bijhorende image op. Als cel de waarde null bevat dan maak je gebruik van wit.png.
+   Declareer in OxoComponent.js een klasse <code>OxoComponent</code> met volgende members
+
+   - <code>#bord</code>: instantie van Spelbord, aan te maken in de constructor
+   - maak een methode <code>#toHtml</code> aan. We voorzien de code later.
+   - in de constructor
+     - maak een instantie aan van het Spelbord en ken dit toe aan #bord
+     - haal alle img- elementen op en stop deze in een array, dit kan je als volgt doen
+     <pre>const imgElementen = document.getElementsByTagName('img');</pre>
+     - overloop deze array <code>imgElementen</code> en definieer de onclick event handler voor elk element (gebruik de arrow functions):
+       - roep de methode plaatsSymbool aan van spelbord; als argument voor de parameter symbool geef je ‘O’ door, de argumenten voor de rij en kol parameters zal je uit het id van het <code>img-element</code> moeten halen.
+       - denk eraan dat arrays in JavaScript 0-based zijn en dat de id’s van de <code>img-elementen</code> 1-based zijn.
+       - stel het src-attribuut het <code>img-element</code> in op ‘images/O.
+       - roep de methode <code>#toHtml</code> aan
+   - roep de <code>#toHtml</code> methode aan
+   - de methode <code>#toHtml</code>:
+     - overloop alle rijen en kolommen van het bord. Voor elke cel (combinatie rij/kolom) haal je de bijhorende image op. Als cel de waarde null bevat dan maak je gebruik van wit.png.
 
    <br></br>
 
