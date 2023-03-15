@@ -8,9 +8,9 @@ Dit is een vereenvoudigde versie van het _Afrikaans dobbelspel_. Meer hierover v
 
 In het begin van het spel wordt gevraagd hoeveel _spelers_ deelnemen. Dan wordt de _naam_ van elke speler opgevraagd. Dit gebeurt via een prompt. Voorbeeld:
 
-![dobbelAantalSpelers.PNG](./images/dobbelAantalSpelersVragen.PNG "Hoeveel spelers?")
+![dobbelAantalSpelers.PNG](./images/dobbelAantalSpelersVragen.PNG 'Hoeveel spelers?')
 
-![dobbelNaamSpelers.PNG](./images/dobbelSpelerNaamIngeven.PNG "Hoeveel spelers?")
+![dobbelNaamSpelers.PNG](./images/dobbelSpelerNaamIngeven.PNG 'Hoeveel spelers?')
 
 Om beurt gooit een speler met _vijf dobbelstenen_. De speler verdient _punten_ volgens het aantal ogen van de dobbelstenen, enkel 1 en 5 leveren punten op.
 
@@ -21,16 +21,16 @@ Om beurt gooit een speler met _vijf dobbelstenen_. De speler verdient _punten_ v
 De eerste speler die _10.000_ punten behaalt wint het spel.
 Een voorbeeld van de initiële scherm layout: speler Jan is aan zet
 
-![janAanZet.PNG](./images/janAanZet.PNG "Jan aan zet")
+![janAanZet.PNG](./images/janAanZet.PNG 'Jan aan zet')
 
 Jan heeft de dobbelstenen gerold:
 
-![janGerold.PNG](./images/janGerold.PNG "Jan heeft gerold")
+![janGerold.PNG](./images/janGerold.PNG 'Jan heeft gerold')
 
 Merk op dat de knop ‘Rol dobbelstenen’ nu de knop ‘Vogende speler’ is geworden.
 Je kan steeds het scorebord raadplegen via de knop ‘Scorebord’:
 
-![scorebord.PNG](./images/scorebord.PNG "Scorebord")
+![scorebord.PNG](./images/scorebord.PNG 'Scorebord')
 
 We bouwen het spel stap per stap op, volg de opgave...
 
@@ -73,15 +73,15 @@ We bouwen het spel stap per stap op, volg de opgave...
 7.  Pas de klasse <code>AfrikaansDobbelenComponent</code> aan
     functie
 
-        - verwijder de property <code>dobbelsteen</code>
-        - voeg een private property <code>speler</code> toe
-        - in de <code>constructor</code> maak je een nieuwe Speler aan.Geef de speler de naam Kirikou
-        - event handling: zorg dat wanneer er geklikt wordt op de knop “Rol dobbelstenen”, de dobbelstenen van de speler effectief gerold worden, en de methode toHtml aangeroepen wordt. Belangrijk: maak gebruik van een arrow functie. Het this keyword verwijst dan naar de instantie van de klasse.
-        - pas de methode <code>#toHtml</code> aan zodat deze nu een speler object kan weergeven:
-          - in de <code>img-elementen</code> toon je de waarde van elke dobbelsteen van de speler.
-           - in het span element met id speler zet je ‘Speler = [de naam van de speler]’ Maak gebruik van <code>document.getElementById</code> om de span op te halen, en gebruik de <code>innerText</code> property om de waarde van de span aan te passen.
-          - in het span element met id score zet je ‘Score = [de score van de speler]’ Maak gebruik van <code>document.getElementById</code> om de span op te halen, en gebruik de <code>innerText</code> property om de waarde van de span aan te passen.
-          <br></br>
+    - verwijder de property <code>dobbelsteen</code>
+    - voeg een private property <code>speler</code> toe
+    - in de <code>constructor</code> maak je een nieuwe Speler aan.Geef de speler de naam Kirikou
+    - event handling: zorg dat wanneer er geklikt wordt op de knop “Rol dobbelstenen”, de dobbelstenen van de speler effectief gerold worden, en de methode toHtml aangeroepen wordt. Belangrijk: maak gebruik van een arrow functie. Het this keyword verwijst dan naar de instantie van de klasse.
+    - pas de methode <code>#toHtml</code> aan zodat deze nu een speler object kan weergeven:
+      - in de <code>img-elementen</code> toon je de waarde van elke dobbelsteen van de speler.
+        - in het span element met id speler zet je ‘Speler = [de naam van de speler]’ Maak gebruik van <code>document.getElementById</code> om de span op te halen, en gebruik de <code>innerText</code> property om de waarde van de span aan te passen.
+      - in het span element met id score zet je ‘Score = [de score van de speler]’ Maak gebruik van <code>document.getElementById</code> om de span op te halen, en gebruik de <code>innerText</code> property om de waarde van de span aan te passen.
+        <br></br>
 
 8.  Als je <code>index.html</code> bekijkt krijg je de 5 dobbelstenen van de speler te zien met de score. Telkens je op “Rol dobbelstenen” klikt past het scherm zich aan.
     <br></br>
@@ -130,11 +130,11 @@ We bouwen het spel stap per stap op, volg de opgave...
 
 Vorm als eerste speler drie op een rij! Op een bord van 3x3 zetten twee spelers om beurt hun symbool (de ene speler speelt met het symbool X, de andere met symbool O. De winnaar is diegene die er als eerste erin slaagt om met zijn symbool een drie op een rij te vormen. Dit kan horizontaal, verticaal of diagonaal. Het spel kan ook eindigen in een gelijkspel. Dit gebeurt wanneer alle 9 vakjes van het bord een symbool bevatten, zonder dat er een drie op een rij is gevormd. De speler met symbool O mag het spel beginnen.
 
-![oxoSpelvoorbeelden.PNG](./images/oxoSpelvoorbeelden.PNG "Voorbeelden")
+![oxoSpelvoorbeelden.PNG](./images/oxoSpelvoorbeelden.PNG 'Voorbeelden')
 
 De inhoud en opmaak zijn reeds voorzien in index.html en oxo.css. Er wordt gebruik gemaakt van drie afbeeldingen: wit.png, x.png en o.png. Initieel start je met een leeg bord en bevatten alle img- elementen de afbeelding wit.png.
 
-![oxoStart.PNG](./images/oxoStart.PNG "Start")
+![oxoStart.PNG](./images/oxoStart.PNG 'Start')
 
 We gaan stap voor stap gedrag aan onze pagina toevoegen.
 
@@ -153,6 +153,7 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
 4. Maak in de submap js een bestand <code>OxoComponent.js</code> aan.
    Declareer in OxoComponent.js een klasse <code>OxoComponent</code> met volgende members - <code>#bord</code>: instantie van Spelbord, aan te maken in de constructor - maak een methode <code>#toHtml</code> aan. We voorzien de code later. - in de constructor - maak een instantie aan van het Spelbord en ken dit toe aan #bord - haal alle img- elementen op en stop deze in een array, dit kan je als volgt doen
    <pre>const imgElementen = document.getElementsByTagName('img');</pre> - overloop deze array <code>imgElementenen</code> en definieer de onclick event handler voor elk element (gebruik de arrow functions): - roep de methode plaatsSymbool aan van spelbord; als argument voor de parameter symbool geef je ‘O’ door, de argumenten voor de rij en kol parameters zal je uit het id van het <code>img-element</code> moeten halen. - denk eraan dat arrays in JavaScript 0-based zijn en dat de id’s van de <code>img-elementen</code> 1-based zijn. - stel het src-attribuut het <code>img-element</code> in op ‘images/O. - roep de methode <code>#toHtml</code> aan - roep de <code>#toHtml</code> methode aan - de methode <code>#toHtml</code>: - overloop alle rijen en kolommen van het bord. Voor elke cel (combinatie rij/kolom) haal je de bijhorende image op. Als cel de waarde null bevat dan maak je gebruik van wit.png.
+
    <br></br>
 
 5. Declareer in index.js een <code>init</code> functie. In de functie doe je het volgende:
@@ -163,7 +164,7 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
 
 6. Je kan nu de index pagina laden in de browser en kan op een correcte manier (klik op vakje vult dat vakje met O), het bord volledig opvullen met het symbool O…
 
-   ![oxoAlleenO.PNG](./images/oxoAlleenO.PNG "Start")
+   ![oxoAlleenO.PNG](./images/oxoAlleenO.PNG 'Start')
    <br></br>
 
 7. Declareer in een nieuw bestand <code>Spel.js</code> een klasse **<code>Spel</code>** met volgende properties
@@ -185,7 +186,7 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
 
 9. Je kan nu de index pagina laden in de browser en het bord afwisselend met X en O opvullen. Je ziet steeds wie aan de beurt is
 
-   ![oxoIndex.PNG](./images/oxoIndex.PNG "Index")
+   ![oxoIndex.PNG](./images/oxoIndex.PNG 'Index')
    <br></br>
 
 10. Finaliseer de klassen <code>Spelbord</code> en <code>Spel</code>.
@@ -200,4 +201,4 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
 
 11. Pas de <code>#toHtml</code> functie in <code>OxoComponent</code> aan zodat afhankelijk van de toestand van het spel, de juiste message weergegeven wordt: volgende speler/gelijkspel/winnaar. Veel speelplezier!
     <br></br>
-    ![oxoComplete.PNG](./images/oxoComplete.PNG "Complete")
+    ![oxoComplete.PNG](./images/oxoComplete.PNG 'Complete')
