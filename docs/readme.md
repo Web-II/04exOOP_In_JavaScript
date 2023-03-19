@@ -145,8 +145,9 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
 3. Maak in de submap <code>js</code> een bestand <code>Spelbord.js</code> aan.
    Declareer in Spelbord.js een klasse <code>Spelbord</code> met volgende members
 
-   - <code>#bord</code>: in de constructor wordt een tweedimensionale array aangemaakt en aan <code>#bord</code> toegekend. Elk element van de array bevat <code>null</code>.
+   - <code>#bord</code>: in de constructor wordt een tweedimensionale array aangemaakt en aan <code>#bord</code> toegekend. Elk element van de array bevat <code>null</code>.Maak ook een getter aan.
    - <code>plaatsSymbool(symbool, rij, kol)</code>: een methode die het symbool op de juiste plaats op <code>#bord</code> plaatst
+   - <code>geef( rij, kol)</code>: een methode die het symbool op in die rij en kolom op het bord teruggeeft
    - exporteer de klasse
      <br></br>
 
@@ -162,13 +163,11 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
      - overloop deze array <code>imgElementen</code> en definieer de onclick event handler voor elk element (gebruik de arrow functions):
        - roep de methode plaatsSymbool aan van spelbord; als argument voor de parameter symbool geef je ‘O’ door, de argumenten voor de rij en kol parameters zal je uit het id van het <code>img-element</code> moeten halen.
        - denk eraan dat arrays in JavaScript 0-based zijn en dat de id’s van de <code>img-elementen</code> 1-based zijn.
-       - stel het src-attribuut het <code>img-element</code> in op ‘images/O.
        - roep de methode <code>#toHtml</code> aan
    - roep de <code>#toHtml</code> methode aan
    - de methode <code>#toHtml</code>:
-     - overloop alle rijen en kolommen van het bord. Voor elke cel (combinatie rij/kolom) haal je de bijhorende image op. Als cel de waarde null bevat dan maak je gebruik van wit.png.
-
-   <br></br>
+     - overloop alle rijen en kolommen van het bord. Voor elke cel (combinatie rij/kolom) haal je de bijhorende image op in de HTML pagina en stel je het src attribuut in. Als cel de waarde null bevat dan maak je gebruik van wit.png, anders van <code>symbool</code>.png
+       <br></br>
 
 5. Declareer in index.js een <code>init</code> functie. In de functie doe je het volgende:
 
@@ -184,19 +183,26 @@ We gaan stap voor stap gedrag aan onze pagina toevoegen.
 7. Declareer in een nieuw bestand <code>Spel.js</code> een klasse **<code>Spel</code>** met volgende properties
 
    - <code>#spelbord</code>: instantie van Spelbord, aan te maken in de constructor
-   - <code>#tePlaatsenSymbool</code>: initieel ‘O’, voorzie een getter -<code> #geplaatsteSymbool</code>: initieel ‘X’, voorzie een getter
+   - <code>#tePlaatsenSymbool</code>: initieel ‘O’, voorzie een getter
+   - <code> #geplaatsteSymbool</code>: initieel ‘X’, voorzie een getter
    - <code>#winnaarsSymbool</code>: initieel null, voorzie een getter
    - <code>plaatsSymbool(rij, kol)</code>: methode die het te <code>#plaatsenSymbool</code> op <code>rij</code>, <code>kolom</code> zet op het <code>spelbord</code> en nadien <code>#teplaatsenSymbool</code> en <code>#geplaatsteSymbool</code> swapt. Zorg dat dit niet gebeurt indien het bewuste vak op het spelbord niet vrij is. Voeg hiertoe een methode <code>isVrij(rij, kol)</code> toe aan Spelbord.
-     <br></br>
+
+- <code>geefSymbool(rij, kol)</code>: methode die het symbool uit de rij en kolom teruggeeft
+  <br></br>
 
 8. Pas de klasse <code>OxoComponent</code> aan.
 
-   - vervang de private property #bord door #spel, een instantie van SPel aan te maken in de constructor
+   - vervang de private property #bord door #spel, een instantie van Spel aan te maken in de constructor
    - in de constructor
      - instantieer een <code>Spel</code> ipv een <code>Spelbord</code>
-     - zorg dat het <code>img-element</code> nu volgens het <code>geplaatsteSymbool</code> aangepast wordt (niet langer steeds een ‘O’)
-   - pas <code>#toHtml()</code> aan. In deze functie ga je de <code>innerHTML</code> van div-element met id message instellen: <pre>Speler [s] is aan de beurt</pre> waarbij [s] het tePlaatsenSymbool is
-     <br></br>
+     - zorg dat het <code>img-element</code> nu volgens het <code>geplaatsteSymbool</code> aangepast wordt (niet langer steeds een ‘O’). Maak gebruik van plaatsSymbool uit klasse Spel
+   - pas <code>#toHtml()</code> aan.
+
+     - In deze functie ga je de <code>innerHTML</code> van div-element met id message instellen: <pre>Speler [s] is aan de beurt</pre> waarbij [s] het tePlaatsenSymbool is.
+
+     - Bovendien vraag je nu het symbool per vakje op via het spel.
+       <br></br>
 
 9. Je kan nu de index pagina laden in de browser en het bord afwisselend met X en O opvullen. Je ziet steeds wie aan de beurt is
 
