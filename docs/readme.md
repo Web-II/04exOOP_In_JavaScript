@@ -71,12 +71,11 @@ We bouwen het spel stap per stap op, volg de opgave...
       <br></br>
 
 7.  Pas de klasse <code>AfrikaansDobbelenComponent</code> aan
-    functie
 
     - verwijder de property <code>dobbelsteen</code>
     - voeg een private property <code>speler</code> toe
     - in de <code>constructor</code> maak je een nieuwe Speler aan.Geef de speler de naam Kirikou
-    - event handling: zorg dat wanneer er geklikt wordt op de knop “Rol dobbelstenen”, de dobbelstenen van de speler effectief gerold worden, en de methode toHtml aangeroepen wordt. Belangrijk: maak gebruik van een arrow functie. Het this keyword verwijst dan naar de instantie van de klasse.
+    - in de <code>constructor</code> zorg je voor event handling. Wanneer er geklikt wordt op de knop “Rol dobbelstenen”, de dobbelstenen van de speler effectief gerold worden, en de methode toHtml aangeroepen wordt. Belangrijk: maak gebruik van een arrow functie. Het this keyword verwijst dan naar de instantie van de klasse.
     - pas de methode <code>#toHtml</code> aan zodat deze nu een speler object kan weergeven:
       - in de <code>img-elementen</code> toon je de waarde van elke dobbelsteen van de speler.
         - in het span element met id speler zet je ‘Speler = [de naam van de speler]’ Maak gebruik van <code>document.getElementById</code> om de span op te halen, en gebruik de <code>innerText</code> property om de waarde van de span aan te passen.
